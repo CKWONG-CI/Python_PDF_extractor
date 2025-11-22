@@ -16,3 +16,28 @@ Or use the helper script:
 ```
 bash run_pdf_tool.sh --pdf-file /path/to/file.pdf --keywords-file keywords.txt --output-dir ./out
 ```
+
+Setup — create a virtual environment and install dependencies
+
+Linux / macOS (or WSL):
+```
+cd /path/to/project
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Git Bash (Windows) — use the same commands as Linux/WSL, or call the helper script with `bash`:
+```
+bash run_pdf_tool.sh --pdf-file "path/to/file.pdf" --keywords-file keywords.txt --output-dir ./out
+```
+
+Windows PowerShell:
+```
+cd C:\path\to\project
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1    # may require Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+pip install -r requirements.txt
+python pdf_platform.py --pdf-file ".\BLE Indoor Localization based on Improved RSSI and Trilateration.pdf" --keywords-file .\keywords.txt --output-dir .\out
+```
+
