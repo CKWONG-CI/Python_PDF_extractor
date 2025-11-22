@@ -41,3 +41,19 @@ pip install -r requirements.txt
 python pdf_platform.py --pdf-file ".\BLE Indoor Localization based on Improved RSSI and Trilateration.pdf" --keywords-file .\keywords.txt --output-dir .\out
 ```
 
+Run the PowerShell helper script (`run_pdf_tool.ps1`)
+
+If you have `run_pdf_tool.ps1` in the project root you can run it instead of the manual steps. Example:
+```
+# (may need to allow running local scripts once)
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+# run the wrapper (from project folder)
+.\run_pdf_tool.ps1 -PdfFile ".\BLE Indoor Localization based on Improved RSSI and Trilateration.pdf" -KeywordsFile ".\keywords.txt" -OutputDir ".\out"
+```
+
+If you prefer not to change ExecutionPolicy permanently you can run the script with a one-off bypass:
+```
+powershell -ExecutionPolicy Bypass -File .\run_pdf_tool.ps1 -PdfFile ".\BLE Indoor Localization based on Improved RSSI and Trilateration.pdf" -KeywordsFile ".\keywords.txt" -OutputDir ".\out"
+```
+
